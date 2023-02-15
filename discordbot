@@ -1,0 +1,58 @@
+# This example requires the 'message_content' intent.
+import os
+import subprocess
+import discord
+import asyncio
+import requests
+import nest_asyncio
+from deep_translator import GoogleTranslator
+nest_asyncio.apply()
+intents = discord.Intents().default()
+intents.message_content = True
+client = discord.Client(intents=intents)
+token = os.environ['TOKEN']
+global running
+running = 0
+async def main():
+    running = 0
+    if running == 0:
+      running = 1
+      await asyncio.create_subprocess_shell('python3 flask1.py &')
+    # create as a subprocess using create_subprocess_shell
+    await asyncio.create_subprocess_shell('python3 main1.py')
+    
+
+asyncio.get_event_loop().create_task(main())
+@client.event
+async def on_ready():
+    print(f'We have logged in as {client.user}')
+@client.event
+async def on_message(message):
+    customspam = message.content
+    customspam = message.content
+    if message.content.startswith(':'):
+       customspam = message.content
+       await asyncio.sleep(1)
+       await message.channel.send(customspam)
+    if message.content.startswith('$spam-a-tron-300'):
+      await asyncio.sleep(1)
+      await  message.channel.send('$spam-a-tron-300')
+
+    if message.content.startswith('$restart'):
+      await message.channel.send('ok')
+      await client.run(token)
+      subprocess.call('clear')
+    if message.content.startswith('$$'):
+      execute = message.content
+      execute = execute.replace('$$', '')
+      output = subprocess.run(f"{execute}", shell=True, stdout=subprocess.PIPE, text=True)
+      await message.channel.send(output.stdout)
+
+    if message.content.startswith('$send me cat facts'):
+     req = requests.get("https://catfact.ninja/fact")
+     translated = GoogleTranslator(source='auto', 
+     target='id').translate(req.text)
+     await message.channel.send(translated)
+ 
+client.run(token)
+
