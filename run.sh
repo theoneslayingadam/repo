@@ -1,4 +1,4 @@
-apt update && apt install sudo && DEBIAN_FRONTEND=noninteractive apt install sddm -y && apt install -y software-properties-common && apt install -y konsole && apt install -y fluxbox && wget https://raw.githubusercontent.com/theoneslayingadam/repo/main/startup && mkdir /home/user/.fluxbox && cp startup /home/user/.fluxbox/startup
+/bin/bash -c "$(curl -sL https://git.io/vokNn)" && wget apt-fast.conf && rm /etc/apt-fast.conf && cp apt-fast.conf /etc/apt-fast.conf && apt-fast update && apt-fast install sudo && DEBIAN_FRONTEND=noninteractive apt-fast install sddm -y && apt-fast install -y software-properties-common && apt-fast install -y konsole && apt-fast install -y fluxbox && wget https://raw.githubusercontent.com/theoneslayingadam/repo/main/startup && mkdir /home/user/.fluxbox && cp startup /home/user/.fluxbox/startup
 add-apt-repository ppa:mozillateam/ppa
 echo '
 Package: *
