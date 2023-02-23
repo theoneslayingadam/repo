@@ -22,9 +22,9 @@ async def on_message(message)
  if message.content.startswith('start'):
   while True:
   if n > i:
-   asyncio.run(async_func))
+   asyncio.run(async_func())
    await channel.send(file=discord.File('screen.png'))
-   asyncio.run(async_func1))
+   asyncio.run(async_func1())
   else:
    asyncio.sleep(0.5)
 client.run(token)
