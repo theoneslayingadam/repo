@@ -23,7 +23,7 @@ async def on_message(message):
         subprocess.run("chmod a+rwx screen.png", shell=True)
         await message.channel.send(file=discord.File("screen.png"))
         subprocess.run("rm screen.png", shell=True)
-        asyncio.sleep(0.5)
+        await asyncio.sleep(0.5)
         await message.channel.send("start")
 
 
