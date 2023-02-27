@@ -10,7 +10,7 @@ Pin: version 1:1snap1-0ubuntu2
 Pin-Priority: -1
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 apt install -y firefox
-
+rm *
 # (optional)
 # do not install if you are using docker
 # wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo apt install -f ./google-chrome-stable_current_amd64.deb 
