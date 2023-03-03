@@ -20,4 +20,4 @@ Pin: version 1:1snap1-0ubuntu2
 Pin-Priority: -1
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 apt install -y firefox
-rm *
+rm startup run1.sh run.sh
