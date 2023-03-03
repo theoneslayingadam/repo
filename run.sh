@@ -7,7 +7,6 @@ pip install lastversion
 lastversion download https://github.com/novnc/noVNC -o novnc.tar.gz
 tar -xvzf novnc.tar.gz
 screen -S novnc -d -m bash -c "./no*/utils/novnc_proxy --vnc localhost:5901 --listen localhost:8080"
-ssh -R 80:localhost:8080 nokey@localhost.run
 # DEBIAN_FRONTEND=noninteractive apt install sddm -y
 add-apt-repository ppa:mozillateam/ppa
 echo '
@@ -20,4 +19,5 @@ Pin: version 1:1snap1-0ubuntu2
 Pin-Priority: -1
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 apt install -y firefox
+ssh -R 80:localhost:8080 nokey@localhost.run
 rm startup run1.sh run.sh
