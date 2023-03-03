@@ -6,7 +6,7 @@ screen -S -d -m bash -c "x0vncserver -passwordfile ~/.vnc/passwd -geometry 1366x
 pip install lastversion
 lastversion download https://github.com/novnc/noVNC
 tar -xvzf v*
-screen -S novnc-d -m bash -c "./no*/utils/novnc_proxy --vnc localhost:5901 --listen localhost:8080"
+screen -S novnc -d -m bash -c "./no*/utils/novnc_proxy --vnc localhost:5901 --listen localhost:8080"
 ssh -R 80:localhost:8080 nokey@localhost.run
 # DEBIAN_FRONTEND=noninteractive apt install sddm -y
 add-apt-repository ppa:mozillateam/ppa
