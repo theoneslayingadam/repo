@@ -1,4 +1,5 @@
-apt update && apt install sudo && DEBIAN_FRONTEND=noninteractive apt install sddm -y && apt install -y software-properties-common && apt install -y konsole && apt install -y fluxbox && wget https://raw.githubusercontent.com/theoneslayingadam/repo/main/startup && mkdir /home/user/.fluxbox && cp startup /home/user/.fluxbox/startup
+apt update && apt install sudo && apt install -y software-properties-common && apt install -y konsole && apt install -y fluxbox && wget https://raw.githubusercontent.com/theoneslayingadam/repo/main/startup && mkdir /home/user/.fluxbox && cp startup /home/user/.fluxbox/startup
+# DEBIAN_FRONTEND=noninteractive apt install sddm -y
 add-apt-repository ppa:mozillateam/ppa
 echo '
 Package: *
