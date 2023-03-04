@@ -6,6 +6,8 @@ pip install lastversion
 lastversion download https://github.com/novnc/noVNC -o novnc.tar.gz
 tar -xvzf novnc.tar.gz
 screen -S novnc -d -m bash -c "./no*/utils/novnc_proxy --vnc localhost:5901 --listen localhost:8080"
+export DISPLAY=:1
+screen -S konsole -d -m bash -c "konsole"
 # DEBIAN_FRONTEND=noninteractive apt install sddm -y
 add-apt-repository ppa:mozillateam/ppa
 echo '
