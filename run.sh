@@ -1,5 +1,6 @@
 apt update && apt-get update && apt-get install tigervnc-scraping-server git -y  && apt install sudo xvfb screen python3-pip -y && apt install -y software-properties-common && apt install -y konsole && apt install -y fluxbox && wget https://raw.githubusercontent.com/theoneslayingadam/repo/main/startup && mkdir /home/user/.fluxbox && cp startup /home/user/.fluxbox/startup
 mkdir tools
+wget https://raw.githubusercontent.com/theoneslayingadam/repo/main/startdisplay.sh -O tools/startdisplay.sh
 wget https://raw.githubusercontent.com/theoneslayingadam/repo/main/stopdisplay.sh -O tools/stopdisplay.sh
 screen -S xvfb -d -m bash -c "xvfb-run -f /root/.Xauthority -n 1 startfluxbox"
 # echo "user    ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
